@@ -1,0 +1,69 @@
+### Node / JS / Bun ###
+node_modules/
+/.pnp/
+/.pnp.js
+bun.lockb
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+### Turborepo / monorepo ###
+.turbo/
+dist/
+build/
+out/
+/.next/
+
+### Flox / env ###
+.flox/
+.env
+.env.*
+local.env
+
+### Logs ###
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+### OS / Editor ###
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+### Test coverage / reports ###
+coverage/
+.nyc_output/
+jest-cache/
+test-results/
+
+### Database / runtime files ###
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+/*.db
+
+### Temp / caches ###
+.cache/
+tmp/
+temp/
+.parcel-cache/
+/.cache-loader
+
+### Build artifacts ###
+dist-*/
+build-*/
+public/build/
+
+### Misc ###
+*.pem
+*.key
+coverage.html
