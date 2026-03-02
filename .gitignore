@@ -67,3 +67,5 @@ public/build/
 *.pem
 *.key
 coverage.html
+
+/generated/prisma
