@@ -1,9 +1,17 @@
 import { Injectable } from "@nestjs/common";
-import { PrismaClient } from "@prisma/client";
-import { PrismaService } from "../../../prisma/prisma.service";
+import { PrismaService } from "../../database/prisma.service";
+import { CreateProductDto } from "./dto/create-product.dto";
+
 @Injectable()
 export class ProductService {
-  constructor(private prisma: PrismaService) {}
+  constructor(private readonly prisma: PrismaService) {}
 
-  // We will add methods here later
+  create(productDto: CreateProductDto) {
+    return this.prisma.product.create({
+      data: productDto,
+    });
+  }
+  getAllProducts() {
+    return this.prisma.product.findMany();
+  }
 }
