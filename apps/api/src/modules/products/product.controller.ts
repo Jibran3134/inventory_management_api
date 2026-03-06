@@ -48,4 +48,9 @@ export class ProductController {
   delete(@Param("id", ParseIntPipe) id: number) {
     return this.productService.deleteProduct(id);
   }
+
+  @Get(":id/stock")
+  getStockById(@Param("id", ParseIntPipe) id: number) {
+    return this.productService.getStockById(id);
+  }
 }

@@ -55,4 +55,20 @@ export class ProductService {
       },
     });
   }
+
+  async getStockById(id: number) {
+    const product = await this.getProductById(id);
+    return { stock: product.stockQuantity };
+  }
+
+  async increaseQuantity(productID: number, quantity: number) {
+    return this.prisma.product.updateMany({
+      where: { id: productID },
+      data: {
+        stockQuantity: {
+          increment: quantity,
+        },
+      },
+    });
+  }
 }
