@@ -9,7 +9,7 @@ export class InventoryController {
     private inventoryService: InventoryService,
     private readonly logger: LoggerService,
   ) {}
-  @Throttle({ default: { limit: 5, ttl: 60 } })
+  @Throttle({ default: { limit: 5, ttl: 60000 } })
   @Post("restock/:productId")
   async restock(
     @Param("productId") productId: string,

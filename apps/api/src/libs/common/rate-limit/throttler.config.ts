@@ -4,12 +4,15 @@ import { ThrottlerModule, ThrottlerGuard } from "@nestjs/throttler";
 
 @Module({
   imports: [
-    ThrottlerModule.forRoot([
-      {
-        ttl: 60,
-        limit: 10,
-      },
-    ]),
+    ThrottlerModule.forRoot({
+      throttlers: [
+        {
+          name: "default",
+          ttl: 60000, // 60 seconds in milliseconds
+          limit: 10,
+        },
+      ],
+    }),
   ],
   providers: [
     {
@@ -17,5 +20,6 @@ import { ThrottlerModule, ThrottlerGuard } from "@nestjs/throttler";
       useClass: ThrottlerGuard,
     },
   ],
+  exports: [ThrottlerModule],
 })
 export class RateLimitModule {}

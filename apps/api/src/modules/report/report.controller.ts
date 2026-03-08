@@ -10,7 +10,7 @@ export class ReportingController {
     private readonly logger: LoggerService,
   ) {}
 
-  @Throttle({ default: { limit: 5, ttl: 60 } })
+  @Throttle({ default: { limit: 5, ttl: 60000 } })
   @Get("low-stock")
   async lowStock() {
     try {

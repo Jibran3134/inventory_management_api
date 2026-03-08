@@ -20,7 +20,7 @@ export class ProductController {
     private readonly productService: ProductService,
     private readonly logger: LoggerService,
   ) {}
-  @Throttle({ default: { limit: 5, ttl: 60 } }) // Limit to 5 requests per minute
+  @Throttle({ default: { limit: 5, ttl: 60000 } }) // Limit to 5 requests per 60 seconds
   @Post()
   create(@Body() productDto: CreateProductDto) {
     try {

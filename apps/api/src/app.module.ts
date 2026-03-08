@@ -1,6 +1,4 @@
 import { Module } from "@nestjs/common";
-import { APP_GUARD } from "@nestjs/core";
-import { ThrottlerGuard } from "@nestjs/throttler";
 
 import { AppController } from "./app.controller";
 
@@ -42,10 +40,6 @@ import { LoggerService } from "./libs/common/logging/logger.service";
      */
     RedisService,
     LoggerService,
-    {
-      provide: APP_GUARD,
-      useClass: ThrottlerGuard,
-    },
   ],
 })
 export class AppModule {}

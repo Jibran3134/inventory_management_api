@@ -9,7 +9,7 @@ export class OrderController {
     private readonly ordersService: OrderService,
     private readonly logger: LoggerService,
   ) {}
-  @Throttle({ default: { limit: 5, ttl: 60 } })
+  @Throttle({ default: { limit: 5, ttl: 60000 } })
   @Post()
   create(@Body() dto: CreateOrderDto) {
     try {
