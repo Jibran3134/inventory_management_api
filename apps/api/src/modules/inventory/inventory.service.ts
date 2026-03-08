@@ -1,4 +1,3 @@
-// src/modules/inventory/inventory.service.ts
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { PrismaService } from "../../libs/database/prisma.service";
 import { LoggerService } from "../../libs/common/logging/logger.service";

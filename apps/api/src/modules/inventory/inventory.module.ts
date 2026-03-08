@@ -1,4 +1,3 @@
-// src/modules/inventory/inventory.module.ts
 import { Module } from "@nestjs/common";
 import { InventoryService } from "./inventory.service";
 import { InventoryController } from "./inventory.controller";
@@ -9,6 +8,6 @@ import { LoggerService } from "../../libs/common/logging/logger.service";
   imports: [DatabaseModule],
   controllers: [InventoryController],
   providers: [InventoryService, PrismaService, LoggerService],
-  exports: [InventoryService], // So other modules (OrdersModule) can use it
+  exports: [InventoryService],
 })
 export class InventoryModule {}

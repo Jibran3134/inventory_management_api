@@ -1,4 +1,3 @@
-// src/modules/inventory/inventory.controller.ts
 import { Controller, Post, Param, Body, Get } from "@nestjs/common";
 import { InventoryService } from "./inventory.service";
 import { LoggerService } from "../../libs/common/logging/logger.service";

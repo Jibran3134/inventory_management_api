@@ -38,16 +38,3 @@ model InventoryOperation {
   type       String   // 'ORDER', 'RESTOCK', etc.
   createdAt  DateTime @default(now())
 }
-
-enum Role {
-  ADMIN
-  USER
-}
-
-model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  password  String
-  role      Role     @default(USER)
-  createdAt DateTime @default(now())
-}

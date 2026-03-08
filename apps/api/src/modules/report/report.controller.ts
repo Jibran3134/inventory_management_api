@@ -1,4 +1,3 @@
-// src/modules/reporting/reporting.controller.ts
 import { Controller, Get, Query } from "@nestjs/common";
 import { ReportingService } from "./report.service";
 import { LoggerService } from "../../libs/common/logging/logger.service";

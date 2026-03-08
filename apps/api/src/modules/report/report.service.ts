@@ -1,4 +1,3 @@
-// src/modules/report/report.service.ts
 import { Injectable } from "@nestjs/common";
 import { PrismaService } from "../../libs/database/prisma.service";
 import { LoggerService } from "../../libs/common/logging/logger.service";

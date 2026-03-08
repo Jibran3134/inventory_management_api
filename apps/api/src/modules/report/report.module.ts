@@ -1,4 +1,3 @@
-// src/modules/reporting/reporting.module.ts
 import { Module } from "@nestjs/common";
 import { ReportingService } from "./report.service";
 import { ReportingController } from "./report.controller";
